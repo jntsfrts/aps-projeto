@@ -3,44 +3,42 @@ package br.com.projetoaps;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
+
+import java.util.ArrayList;
 
 @Controller
-//@RequestMapping("/")
 
-public class HomeController {
+public class HomeController extends HistoricoPagina{
 
-    /*@RequestMapping( value = { "/" , "" ,"/home" })
-    public ModelAndView homePrincipal(){
-        //Retorna a view que deve ser chamada, no caso principal (principal.jsp) que esta dentro da pasta /home
-        return new ModelAndView("index");
+    public HomeController(ArrayList<String> historico) {
+        super(historico);
     }
 
-    @RequestMapping( "/about" )
-    public ModelAndView homeSecundaria(){
-        //Retorna a view que deve ser chamada, no caso secundaria (secundaria.jsp) que esta dentro da pasta /home
-        return new ModelAndView("contact-success");
-    }*/
+    HistoricoPagina h1 = new HistoricoPagina(getHistorico());
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home() {
+        h1.adicionaPagina("Página inicial");
         return "index";
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET, params = {"about"})
-    public String about(@RequestParam(value = "about", required = true) String about) {
+    public String about(@RequestParam(value = "about") String about) {
+        h1.adicionaPagina("Sobre");
         return "about";
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET, params = {"contact"})
-    public String contact(@RequestParam(value = "contact", required = true) String contact) {
+    public String contact(@RequestParam(value = "contact") String contact) {
+        h1.adicionaPagina("Contato");
         return "contact";
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET, params = {"thanks"})
-    public String thanks(@RequestParam(value = "thanks", required = true) String thanks) {
+    public String thanks(@RequestParam(value = "thanks") String thanks) {
+        h1.adicionaPagina("Obrigado");
+        h1.controlePagina();
         return "contact-success";
+
     }
-
-
 }
