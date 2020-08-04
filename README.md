@@ -1,4 +1,4 @@
-<h1>sustentare</h1>
+<h1>Sustentare</h1>
 
 > Status do Projeto: Em desenvolvimento :warning:
 
