@@ -6,7 +6,7 @@
 
 <h2>Iniciando</h2>
 
-<p>Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub num diretório de sua preferência:</p>
+<p>Para iniciar o desenvolvimento, é preciso clonar o projeto do GitHub num diretório de sua preferência:</p>
 
 <p>cd "diretório de sua preferência"</p>
 <p>git clone https://github.com/jntsfrts/aps-projeto </p>
