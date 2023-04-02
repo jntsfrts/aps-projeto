@@ -4,7 +4,7 @@
 
 <p>Este projeto se trata de um site para uma empresa fictícia e foi criado para fins acadêmicos, aplicando os conceitos de Java e Programação Orientada a Objetos.</p>
 
-<h2>Começando</h2>
+<h2>Iniciando</h2>
 
 <p>Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub num diretório de sua preferência:</p>
 
